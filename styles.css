@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "roboto", sans-serif;
+    list-style-type: none;
+}
+
+html, body{ 
+    height: 100%;
+    background-color: hsl(235, 18%, 26%);
+}
+
+p{
+    font-size: 1em;
+    max-width: 40ch;
+    color: hsl(234, 29%, 20%)
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.newsletter-component-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    background-color: #ffffff;
+    padding: 1.5em;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+.newsletter-text-and-form{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em;
+    margin-left: 1em;
+}
+
+.text-title{
+    font-size: 3em;
+    font-weight: 700;
+}
+
+li{
+    margin-left: 1.3em;
+    margin-bottom: .5em;
+    padding-left: .5em;
+}
+
+li::marker{
+    content: url("./assets/icon-list.svg");
+}
+
+input{
+    padding: 1em;
+    border: 1px solid rgba(128, 128, 128, 0.74);
+    border-radius: 5px;
+}
+
+form::before{
+    content: "Email address";
+    font-size: .6em;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+
+button{
+    background-color: hsl(234, 29%, 20%);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 1em;
+    margin-top: 1.5em;
+    font-weight: 700;
+}
+
+
