@@ -20,7 +20,9 @@ p{
 form{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
+
 
 main{
     display: flex;
@@ -38,7 +40,8 @@ main{
     background-color: #ffffff;
     padding: 1.5em;
     border: 1px solid black;
-    border-radius: 5%;
+    border-radius: 3em;
+    box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.25);
 }
 
 .newsletter-text-and-form{
@@ -49,8 +52,8 @@ main{
     margin-left: 1em;
 }
 
-.text-title{
-    font-size: 3em;
+.newsletter-text-and-form span{
+    font-size: 3.5em;
     font-weight: 700;
 }
 
@@ -64,17 +67,33 @@ li::marker{
     content: url("./assets/icon-list.svg");
 }
 
+.input-text{
+    display: flex;
+    justify-content: space-between;
+    font-size: .6em;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+
+.required-email-message{
+    opacity: 0;
+    color: #FF673E;
+}
+
 input{
-    padding: 1em;
+    padding: 1.25em;
     border: 1px solid rgba(128, 128, 128, 0.74);
     border-radius: 5px;
 }
 
-form::before{
-    content: "Email address";
-    font-size: .6em;
-    margin-bottom: 1em;
-    font-weight: 700;
+input:focus{
+    border: 1px solid black;
+}
+
+input:invalid:not(:focus):not(:placeholder-shown){
+    background-color: hsl(7, 100%, 95%);
+    border: 1px solid #FF673E;
+    color: #FF673E;
 }
 
 button{
@@ -82,9 +101,15 @@ button{
     color: #ffffff;
     border: none;
     border-radius: 5px;
-    padding: 1em;
+    padding: 1.25em;
     margin-top: 1.5em;
     font-weight: 700;
+    transition: background 500ms ease-in-out;
+}
+
+button:hover{
+    background: linear-gradient(#FF5476,#FF673E);
+    box-shadow: 0 5px 20px hsla(13, 100%, 62%, .75);
 }
 
 

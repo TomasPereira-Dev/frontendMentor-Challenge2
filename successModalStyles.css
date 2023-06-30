@@ -1,0 +1,33 @@
+.form-success-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    gap: 2em;
+    border-radius: 15px;
+    padding: 4em;
+}
+
+.form-success-container img{
+    max-width: 4em;
+}
+
+.form-success-text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.form-success-title{
+    font-size: 3em;
+    font-weight: 700;
+    max-width: 10ch;
+}
+
+.form-success-text{
+    max-width: 40ch;
+    line-height: 1.5em;
+}
+
+.form-success-text span{
+    font-weight: 700;
+}
