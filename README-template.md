@@ -1,6 +1,10 @@
 # Frontend Mentor - Newsletter sign-up form with success message solution
 
-This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+Hey what's up?
+
+This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv).
+
+(free) junior challenge 1/27
 
 ## Table of contents
 
@@ -11,21 +15,18 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
+This challenge consist in a simple form that once it gets validated throws a popup/modal to the user screen, it's a good project to learn about form validation and DOM manipulation with vanilla JS.
 
 ### The challenge
 
 Users should be able to:
 
 - Add their email and submit the form
-- See a success message with their email after successfully submitting the form
+- See a success message in amodal with their email after successfully submitting the form
 - See form validation messages if:
   - The field is left empty
   - The email address is not formatted correctly
@@ -36,81 +37,46 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [](https://www.frontendmentor.io/solutions/newsletter-signup-using-vanilla-js-8Z3c6ejb83)
+- Live Site URL: [](https://tomaspereira-dev.github.io/frontendMentor-Challenge2/)
 
 ## My process
 
+The first thing I do when it comes to do clones of images is looking at the image with attention and then starting to write the HTML, then I started with the CSS, the form component was pretty much 1 container with flex-direction: column; and a picture, there is a little bit of margin to the left of the form and a gap between it and the img.
+
+most of the things i described until now are like a rutine for alot of projects, there is nothing fancy or that needs a ton of explaining.
+
+After giving the title some gap between the text below I started working with the list, here I learned that you can use svgs as custom markers for the list using the ::marker pseudoelement, it's pretty cool!, I don't know too much about pseudoelements and selectors, so it was a suprise to me haha.
+
+Now comes the form part, the input uses the :focus selector, when its clicked it will have a black border on it, and the :invalid selector, this is very handy to make it glow when the email doesn't match the Regex made in the JS code, but there is a problem here, if you load the page for the first time the :invalid selector will take the input as invalid, even before you write something, so you have to add also the :not selector, if you mix it with the :invalid and the selector that is not working currently, like input:invalid:not(:focus):not(placeholder-shown), you are telling the css that don't do nothing unless the focus is working and the placeholder not being shown shown in the input.
+The submit button has a little transition made with :hover, but honestly I'm not very satisfied with it.
+
+The mobile version of this component needed that the flex-direction changed to column-reverse and that the img changed to a smaller version than the original, so for this I used the picture element, it's the first time that i do something like this, so it's something new.
+
+The design of the modal was pretty simple so I will skip this part.
+I need to carify that this wasn't the best way to make a modal, what I should have done was create it with JS manipulating the DOM and remove it from the document when it's not in use, I will do it in a future solution for this challenge, instead of that I removed the modal and component using display: none; when clicking the buttons.
+
+After all that I started with the JS, using the .toggle method you can add or remove classes from a element, if the class open-modal doesn't exist, the method will add it, return true and the modal will be shown, when the modal button is clicked .toggle is called again, if when the method is called the class already existed, it will remove it and return false, when this happens the modal will close and show the form component.
+
+this is pretty much it, it's not too hard, probably the hardest thing the challenge could had was the regex, I used a generator for that, writing regular expressions is not one of my strenghts :P.
+
+It took me 9:30 hours in total (19 pomodoros with the pomodoro technique).
+
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+-Vanilla JS
+-Flexbox
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+I learned mostly about pseudoelements and selectors and how to work with responsive images, I still don't get how to get srcset to work, its a pain honestly.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Portfolio - [Tomas Pereira](https://tomaspereira-dev.github.io/Portfolio/)
+- Frontend Mentor - [@TomasPereira-Dev](https://www.frontendmentor.io/profile/TomasPereira-Dev)
+- Twitter - [@TomasPereira_JS](https://www.twitter.com/TomasPereira_JS)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
