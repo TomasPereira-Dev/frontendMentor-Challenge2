@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![challenge2-screenshot](https://github.com/TomasPereira-Dev/frontendMentor-Challenge2/assets/81960258/79113570-bb0c-4ba2-9b9e-cbca374f47a5)
 
 
 ### Links
