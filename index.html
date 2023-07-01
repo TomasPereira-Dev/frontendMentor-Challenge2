@@ -27,8 +27,6 @@
           <li>Measuring to ensure updates are a success</li>
           <li>And much more!</li>
         </ul>
-        
-        
         <form action="">
             <div class="input-text">
               <p>Email Address</p>
@@ -36,19 +34,22 @@
             </div>
             <input class="input" type="email" placeholder="email@company.com" required>
           </label>
-          <button type="submit">Subscribe to monthly newsletter</button>
+          <button type="submit" class="form-submit-btn">Subscribe to monthly newsletter</button>
         </form>
       </div>
-      <img src="./assets/illustration-sign-up-desktop.svg" alt="a ilustration for the signup form">
+      <picture>
+        <source srcset="./assets/illustration-sign-up-mobile.svg" media="(max-width: 425px)">
+        <img src="./assets/illustration-sign-up-desktop.svg" alt="a small illustration">
+      </picture>
     </div>
 
-    <div class="form-success-container">
-      <img src="./assets/icon-success.svg">
+    <div class="form-success-container form-validation-true">
       <div class="form-success-text-container">
+        <img src="./assets/icon-success.svg">
         <p class="form-success-title">Thanks for subscribing!</p>
-        <p class="form-success-text">A confirmation email has been sent to <span>ash@loremcompany.com.</span> Please open it and click the button inside to confirm your subscription.</p>
+        <p class="form-success-text">A confirmation email has been sent to <span class="form-success-text-span">ash@loremcompany.com.</span> Please open it and click the button inside to confirm your subscription.</p>
       </div>
-      <button>Dissmiss message</button>
+      <button class="modal-close-btn">Dissmiss message</button>
     </div>
   </main>
   <script src="./modal.js"></script>

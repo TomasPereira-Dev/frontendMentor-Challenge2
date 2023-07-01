@@ -1,5 +1,5 @@
 .form-success-container{
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: #ffffff;
     gap: 2em;
@@ -30,4 +30,17 @@
 
 .form-success-text span{
     font-weight: 700;
+}
+
+@media(max-width: 425px){
+    .form-success-container{
+        height: 100%;
+        padding: 1em;
+        border-radius: 0;
+    }
+
+    .form-success-text-container{
+        margin-top: 25%;
+        justify-content: space-between;
+    }
 }
