@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://www.frontendmentor.io/solutions/newsletter-signup-using-vanilla-js-8Z3c6ejb83)
-- Live Site URL: [](https://tomaspereira-dev.github.io/frontendMentor-Challenge2/)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/newsletter-signup-using-vanilla-js-8Z3c6ejb83)
+- Live Site URL: [Github Pages](https://tomaspereira-dev.github.io/frontendMentor-Challenge2/)
 
 ## My process
 
